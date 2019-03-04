@@ -18,9 +18,75 @@
         <constructor-arg name="price" value="2111"/>
     </bean>
 
-    <bean id="student" class="com.spring.quickstart.xml.Student">
+    <!--<bean id="student" class="com.spring.quickstart.xml.Student">
         <property name="name" value="tom"/>
         <property name="age" value="21"/>
         <property name="phone" ref="phone"/>
+    </bean>-->
+
+    <bean id="car1" class="com.spring.bcm.Car">
+        <property name="brand" value="daben"/>
+        <property name="color" value="red"/>
+        <property name="parameter" value="3.5t"/>
     </bean>
+
+    <bean id="car2" class="com.spring.bcm.Car">
+        <property name="brand" value="baoma"/>
+        <property name="color" value="yello"/>
+        <property name="parameter" value="4.0t"/>
+    </bean>
+
+    <bean id="car3" class="com.spring.bcm.Car">
+        <property name="brand" value="fengtian"/>
+        <property name="color" value="green"/>
+        <property name="parameter" value="4.0t"/>
+    </bean>
+
+    <bean id="boss1" class="com.spring.bcm.Boss">
+        <property name="name" value="mayun"/>
+        <property name="company" value="ali"/>
+        <property name="car" ref="car1"/>
+        <property name="hobbies">
+            <list>
+                <value>游泳</value>
+                <value>看报</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="boss2" class="com.spring.bcm.Boss">
+        <property name="name" value="马化腾"/>
+        <property name="company" value="企鹅"/>
+        <property name="car" ref="car2"/>
+        <property name="hobbies">
+            <list>
+                <value>跑步</value>
+                <value>开发</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="boss3" class="com.spring.bcm.Boss">
+        <property name="name" value="巴菲特"/>
+        <property name="company" value="股票"/>
+        <property name="car" ref="car3"/>
+        <property name="hobbies">
+            <list>
+                <value>跑步</value>
+                <value>炒股</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="meeting" class="com.spring.bcm.Meeting">
+        <property name="theme" value="聊天"/>
+        <property name="bosses">
+            <list>
+                <ref bean="boss1"/>
+                <ref bean="boss2"/>
+                <ref bean="boss3"/>
+            </list>
+        </property>
+    </bean>
+
 </beans>
