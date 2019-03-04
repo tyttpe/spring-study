@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="helloWorld" class="com.spring.quickstart.xml.HelloWorld"/>
+
+<!--<bean id="student" class="com.soft1721.spring.hello.Student">
+    &lt;!&ndash;<property name="name" value="tom"/>
+    <property name="age" value="21"/>&ndash;&gt;
+    <constructor-arg name="name" value="tom"/>
+    <constructor-arg name="age" value="21"/>
+</bean>-->
+
+    <bean id="phone" class="com.spring.quickstart.xml.Phone">
+        <constructor-arg name="brand" value="iphone"/>
+        <constructor-arg name="color" value="red"/>
+        <constructor-arg name="price" value="2111"/>
+    </bean>
+
+    <bean id="student" class="com.spring.quickstart.xml.Student">
+        <property name="name" value="tom"/>
+        <property name="age" value="21"/>
+        <property name="phone" ref="phone"/>
+    </bean>
+</beans>
