@@ -3,13 +3,28 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="messageServiceImpl" class="com.spring.MessageServiceImpl">
+<!--    <bean id="messageServiceImpl" class="com.spring.MessageServiceImpl">
         <constructor-arg name="username" value="tyttpe"/>
         <constructor-arg name="age" value="23"/>
     </bean>
 
 <bean id="messagePrinter" class="com.spring.MessagePrinter">
     <constructor-arg name="service" ref="messageServiceImpl"/>
+</bean>-->
+
+<!--    &lt;!&ndash;配置一个Max的bean&ndash;&gt;
+    <bean id="max" class="com.spring.Max">
+        <constructor-arg name="a" value="5"/>
+        <constructor-arg name="b" value="3"/>
+    </bean>-->
+
+<bean id="user" class="com.spring.User">
+    <property name="account" value="admin"/>
+    <property name="password" value="111"/>
 </bean>
+
+    <bean id="userLogin" class="com.spring.UserLogin">
+      <property name="user" ref="user"/>
+    </bean>
 
 </beans>
