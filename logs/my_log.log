@@ -273,3 +273,9 @@
 2019-03-04 12:36:07 DEBUG DefaultListableBeanFactory:254 - Returning cached instance of singleton bean 'lifecycleProcessor'
 2019-03-04 12:36:07 DEBUG PropertySourcesPropertyResolver:96 - Could not find key 'spring.liveBeansView.mbeanDomain' in any property source
 2019-03-04 12:36:07 DEBUG DefaultListableBeanFactory:254 - Returning cached instance of singleton bean 'meeting'
+2019-03-07 09:41:11 DEBUG ClassPathXmlApplicationContext:594 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@41975e01
+2019-03-07 09:41:12 DEBUG XmlBeanDefinitionReader:395 - Loaded 5 bean definitions from class path resource [beans.xml]
+2019-03-07 09:41:12 DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2019-03-07 09:41:12 DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'hello'
+2019-03-07 09:41:12 DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-03-07 09:41:12 DEBUG DefaultListableBeanFactory:213 - Creating shared instance of singleton bean 'myBeforeAdvice'

@@ -19,7 +19,8 @@ public class UserLogin {
     }
 
     public boolean userLogin(){
-         if (user.getAccount().equals("admin")&&user.getPassword().equals("111")){
+         if (user.getAccount().equals("admin")
+                 &&user.getPassword().equals("111")){
              return true;
          }else {
              return false;
