@@ -9,6 +9,4 @@ public class HelloApp {
         Hello hello = context.getBean(Hello.class);
         System.out.println(hello.getHellow());
     }
-
-
 }

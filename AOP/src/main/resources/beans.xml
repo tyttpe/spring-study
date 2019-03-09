@@ -6,7 +6,6 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
        <!--配置一个Hello的bean,等于Hello hello = new HelloImpl（）-->
        <bean id="hello" class="com.spring.aop.HelloImpl"/>
-
        <bean id="myBeforeAdvice" class="com.spring.aop.MyBeforeAdvice"/>
       <!--配置aop-->
        <aop:config>
