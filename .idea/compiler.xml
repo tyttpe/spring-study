@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="AOP" />
         <module name="IoC" />
+        <module name="orm" />
         <module name="quickstart" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AOP" target="1.8" />
       <module name="IoC" target="1.8" />
+      <module name="orm" target="8" />
       <module name="quickstart" target="1.8" />
     </bytecodeTargetLevel>
   </component>
