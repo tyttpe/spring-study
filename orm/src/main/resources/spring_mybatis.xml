@@ -12,10 +12,8 @@
 
     <!--读入外部数据库连接属性文件-->
     <context:property-placeholder location="classpath:jdbc.properties"/>
-
     <!--扫描Service包的组件-->
     <context:component-scan base-package="com.spring.orm.service"/>
-
     <!--通过druid配置数据源-->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
           init-method="init" destroy-method="close">
@@ -45,13 +43,11 @@
         <property name="poolPreparedStatements" value="true"/>
         <property name="maxPoolPreparedStatementPerConnectionSize" value="20"/>
     </bean>
-
     <!-- 配置mybatis的Session -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="typeAliasesPackage" value="com.spring.orm.entity"/>
     </bean>
-
     <!-- 配置通用Mapper -->
     <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.spring.orm.dao"/>
@@ -64,7 +60,6 @@
             </value>
         </property>
     </bean>
-
     <!--事务管理bean -->
     <bean id="manager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

@@ -127,9 +127,7 @@
       <artifactId>druid</artifactId>
       <version>${druid.version}</version>
     </dependency>
-
-
-
+    
     <!--Lombok依赖-->
     <dependency>
       <groupId>org.projectlombok</groupId>

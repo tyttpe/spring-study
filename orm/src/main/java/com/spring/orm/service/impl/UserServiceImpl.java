@@ -17,31 +17,24 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserDAO userDAO;
-
     @Override
     public List<User> selectUsers() {
         return userDAO.selectAll();
     }
-
     @Override
     public int addUsers(User user) {
         return userDAO.insert(user);
     }
-
     @Override
     public int deleteUser(long id) {
         return userDAO.deleteByPrimaryKey(id);
     }
-
     @Override
     public int updateUser(User user) {
         return userDAO.updateByPrimaryKey(user);
     }
-
     @Override
     public User selectOneUser(long id) {
         return userDAO.selectByPrimaryKey(id);
     }
-
-
 }

@@ -18,19 +18,16 @@ public class UserServiceImplTest {
 
     @Autowired
     private UserService userService;
-
     @Test
     public void selectUsers() {
         List<User> users = userService.selectUsers();
         users.forEach(user -> System.out.println(user));
     }
-
     @Test
     public void selectOneUser() {
         User user = userService.selectOneUser(2);
         System.out.println(user);
     }
-
     @Test
     public void addUser(){
         User user =new User();
@@ -40,13 +37,11 @@ public class UserServiceImplTest {
         int n = userService.addUsers(user);
         assertEquals(1,n);
     }
-
     @Test
     public void deleteUser(){
         int n = userService.deleteUser(1);
         assertEquals(1,n);
     }
-
     @Test
     public void updateUser() {
         User user = userService.selectOneUser(2);
@@ -55,7 +50,4 @@ public class UserServiceImplTest {
         int n = userService.updateUser(user);
         assertEquals(1, n);
     }
-
-
-
 }
